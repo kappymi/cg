@@ -50,6 +50,11 @@ scene.add( sphere );
     directionalLight.position.set(1, 1, 1);
     // シーンに追加
     scene.add(directionalLight);
+  // 平行光源2
+        var directionalLight2 = new THREE.DirectionalLight(0xffffff);
+    directionalLight2.position.set(-1, 1, 1);
+    // シーンに追加
+    scene.add(directionalLight2);
   
   
     // 初回実行
