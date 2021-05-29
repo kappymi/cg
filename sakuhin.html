@@ -41,6 +41,10 @@ scene.add( cylinder );
     // 初回実行
     var update = function() {
       requestAnimationFrame(update);
+      
+      //四角柱を回転
+      cylinder.rotation.x += 0.01;
+      cylinder.rotation.y += 0.01;
   
   
       renderer.render(scene, camera);
