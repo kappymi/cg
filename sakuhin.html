@@ -30,12 +30,19 @@
 
 
   //箱作成
-var geometry = new THREE.BoxGeometry( 0.8, 0.8, 0.8 ); 
+var geometry = new THREE.BoxGeometry( 0.5, 0.5, 0.5 ); 
 var material = new THREE. MeshPhongMaterial( { color: 0x00ff00 } );
 var box = new THREE.Mesh( geometry, material );
 box.position.z = -5;
 scene.add( box );
-
+    
+//球
+var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 );
+var sphereMaterial = new THREE. MeshPhongMaterial( {color: 0x0000ff,wireframe: true} );
+var sphere = new THREE.Mesh( sphereGeometry, sphereMaterial );
+sphere.position.set( 0, 0, -5 );
+scene.add( sphere );
+    
 // 平行光源1
     var directionalLight = new THREE.DirectionalLight(0xffffff);
     directionalLight.position.set(1, 1, 1);
