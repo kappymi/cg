@@ -29,12 +29,12 @@
     var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
 
 
-  //四角柱
-var cylinderGeometry = new THREE.CylinderGeometry( 3, 3, 3, 4 ); 
-var cylinderMaterial = new THREE. MeshphongMaterial( { color: 0xd66b00 } );
-var cylinder = new THREE.Mesh( cylinderGeometry, cylinderMaterial );
-cylinder.position.set( 0.5, 0, -20);
-scene.add( cylinder );
+  //箱作成
+var geometry = new THREE.BoxGeometry( 3, 3, 3 ); 
+var material = new THREE. MeshPhongMaterial( { color: 0xd66b00 } );
+var box = new THREE.Mesh( geometry, material );
+box.position.z = -5;
+scene.add( box );
 
 
   
@@ -43,8 +43,8 @@ scene.add( cylinder );
       requestAnimationFrame(update);
       
       //四角柱を回転
-      cylinder.rotation.x += 0.01;
-      cylinder.rotation.y += 0.01;
+      box.rotation.x += 0.01;
+      box.rotation.y += 0.01;
   
   
       renderer.render(scene, camera);
