@@ -33,7 +33,7 @@
 var geometry = new THREE.BoxGeometry( 0.8, 0.8, 0.8 ); 
 var material = new THREE. MeshPhongMaterial( { color: 0x00ff00 } );
 var box = new THREE.Mesh( geometry, material );
-box.position.set = (0,5,-5);
+box.position.z = -5;
 scene.add( box );
 
 // 平行光源1
